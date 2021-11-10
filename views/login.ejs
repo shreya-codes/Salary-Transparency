@@ -1,9 +1,11 @@
 <div class="row mt-5">
-  <div class="col-md-6 m-auto">
-    <div class="card card-body">
-      <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Login</h1>
+  <div class="col-md-6 m-auto" id="box">
+    <div class="card card-body" id="rightBox">
+      
+      <p class="fontA">Salary Transparency</p>
+      <br><br> <br><br>
       <%- include ("./partials/messages"); %>
-      <form action="/users/login" method="POST">
+      <form action="/users/login" method="POST" id="texts">
         <div class="form-group">
           <label for="email">Email</label>
           <input
@@ -23,11 +25,12 @@
             class="form-control"
             placeholder="Enter Password"
           />
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </div><br>
+        <button type="submit" class="btn btn-primary btn-block" id="login">Login</button>
       </form>
-      <p class="lead mt-4">
-        No Account? <a href="/users/register">Register</a>
+      <p class="lead mt-4" id="texts">
+        No Account?<hr>
+        <div class="btn" id="register"><a href="/users/register">Register</a></div>
       </p>
     </div>
   </div>
