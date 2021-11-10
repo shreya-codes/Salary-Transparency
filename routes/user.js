@@ -1,6 +1,7 @@
 const express=require('express');
 const router= express.Router();// creates a new router object to handle requests
 const bcrypt=require('bcryptjs');
+const passport=require('passport');
 //User model
 const User = require('../models/User'); // now we can use methods on user
 
@@ -43,6 +44,16 @@ router.get('/login',(req,res)=> res.render('Login'));
              
         })
 
+
+
+
+
+
+
+
+
+        
+
     }
     else{
         // res.send('pass');
@@ -78,8 +89,8 @@ router.get('/login',(req,res)=> res.render('Login'));
                      //Save user
                      newUser.save()
                      .then(user=>{
-                         req.flash('success_msg', 'You are nw registered !')
-                        //  res.redirect('/users/login');
+                         req.flash('success_msg', 'You are nOw registered !');
+                         res.redirect('/users/login');
                      })
                      .catch(err => console.log(err));
                 }))
@@ -95,6 +106,21 @@ router.get('/login',(req,res)=> res.render('Login'));
     }
     
 
+ });
+ //Login handle
+ router.post('/login',(req,res,next)=>{
+     passport.authenticate('local',{
+         successRedirect:'/dashboard',
+         failureRedirect:'/users/login',
+         failureFlash:true
+     })(req,res,next);
+
+ })
+ //logout handle
+ router.get('/logout',(req,res)=>{
+     req.logout();
+     req.flash('success_msg','You are loggedout');
+     res.redirect('/users/login');
  })
 
 module.exports=router; //Module exports are the instruction that tells Node. js which bits of code (functions, objects, strings, etc.) to “export” from a given file so other files are allowed to access the exported code
