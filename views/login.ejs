@@ -1,9 +1,9 @@
 <div class="row mt-5">
   <div class="col-md-6 m-auto" id="box">
-    <div class="card card-body" id="rightBox">
+    <div class="card card-body col-lg-4 col-md-5 col-sm-8 col-auto" id="rightBox">
       
       <p class="fontA">Salary Transparency</p>
-      <br><br> <br><br>
+      <br>
       <%- include ("./partials/messages"); %>
       <form action="/users/login" method="POST" id="texts">
         <div class="form-group">
@@ -25,12 +25,11 @@
             class="form-control"
             placeholder="Enter Password"
           />
-        </div><br>
+        </div><br><br>
         <button type="submit" class="btn btn-primary btn-block" id="login">Login</button>
-      </form>
+      </form><br><hr>
       <p class="lead mt-4" id="texts">
-        No Account?<hr>
-        <div class="btn" id="register"><a href="/users/register">Register</a></div>
+        No Account? <a href="/users/register">Register</a>
       </p>
     </div>
   </div>

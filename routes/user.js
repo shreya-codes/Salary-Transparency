@@ -44,16 +44,6 @@ router.get('/login',(req,res)=> res.render('Login'));
              
         })
 
-
-
-
-
-
-
-
-
-        
-
     }
     else{
         // res.send('pass');

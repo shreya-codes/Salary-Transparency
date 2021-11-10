@@ -1,8 +1,10 @@
 <div class="row mt-5">
   <div class="col-md-6 m-auto" id="box">
-    <div class="card card-body" id="rightBox">
+    
+
+    <div class="card card-body col-lg-4 col-md-5 col-sm-8 col-auto" id="rightBox">
       <p class="fontA">Salary Transparency</p>
-      <br><br>
+      <br>
       <%- include ("./partials/messages"); %>
       <form action="/users/register" method="POST" id="texts">
         <div class="form-group">
@@ -52,8 +54,8 @@
         <button type="submit" class="btn btn-primary btn-block" id="register">
           Register
         </button>
-      </form><hr>
+      </form>
       <p class="lead mt-4" id="texts">Have An Account?  <a href="/users/login">Login</a></p>
-    </div>
+    <hr></div>
   </div>
 </div>
