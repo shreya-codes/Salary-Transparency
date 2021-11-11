@@ -8,6 +8,9 @@ const User = require('../models/User'); // now we can use methods on user
 //Employee Model
 const Employee = require('../models/employee');
 
+//Company Model
+const Company = require('../models/Company');
+
 //LOGIN page
 // router.get('/login',(req,res)=> res.send('Login'));
 router.get('/login', (req, res) => res.render('Login'));
@@ -147,6 +150,28 @@ router.post('/submit', (req, res) => {
 
 });
 
+
+router.post('/company', (req, res) => {
+    const { companyname, address, noofdepartment, noofemployees, dateofestablishment, introduction } = req.body;
+
+    const newCompany = new Company({
+        companyname,
+        address,
+        noofdepartment,
+        noofemployees,
+        dateofestablishment,
+        introduction
+    });
+
+
+    //save company
+
+    newCompany.save()
+        .then(Company => {
+            res.redirect('/dashboard');
+        })
+        .catch(err => console.log(err));
+})
 
 
 
