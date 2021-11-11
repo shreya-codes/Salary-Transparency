@@ -3,71 +3,71 @@ const mongoose = require('mongoose');
 const EmployeeSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: True
+        required: true
     },
     gender: {
         type: String,
-        required: True
+        required: true
     },
     company: {
         type: String,
-        required: True
+        required: true
     },
     department: {
         type: String,
-        required: True
+        required: true
     },
     position: {
         type: String,
-        required: True
+        required: true
     },
     salary: {
         type: String,
-        required: True
+        required: true
     },
     experience: {
         type: String,
-        required: True
+        required: true
     },
     joineddate: {
         type: Date,
-        required: True
+        required: true
     },
     stars: {
         type: Number,
-        required: True
+        required: true
     },
     happiness: {
         type: Number,
-        required: True
+        required: true
     },
     bias: {
         type: Number,
-        required: True
+        required: true
     },
     importance: {
         type: Number,
-        required: True
+        required: true
     },
     opportunities: {
         type: Number,
-        required: True
+        required: true
     },
     miss: {
         type: Number,
-        required: True
+        required: true
     },
     advance: {
         type: Number,
-        required: True
+        required: true
     },
     priority: {
         type: Number,
-        required: True
+        required: true
     },
     workplace: {
         type: Number,
-        required: True
+        required: true
     },
     date: {
         type: Date,

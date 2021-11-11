@@ -5,7 +5,8 @@ const passport = require('passport');
 //User model
 const User = require('../models/User'); // now we can use methods on user
 
-
+//Employee Model
+const Employee = require('../models/employee');
 
 //LOGIN page
 // router.get('/login',(req,res)=> res.send('Login'));
@@ -89,13 +90,7 @@ router.post('/register', (req, res) => {
 
 
             });
-
-
-
-
     }
-
-
 });
 //Login handle
 router.post('/login', (req, res, next) => {
@@ -116,8 +111,40 @@ router.get('/logout', (req, res) => {
 
 //employee data submission handle
 router.post('/submit', (req, res) => {
-    console.log(req.body);
-    res.send('hello');
+
+    const { name, gender, company, department, position, salary, experience, joineddate, stars, happiness, bias, importance, opportunities, miss, advance, priority, workplace } = req.body;
+
+    const newEmployee = new Employee({
+        name,
+        gender,
+        company,
+        department,
+        position,
+        salary,
+        experience,
+        joineddate,
+        stars,
+        happiness,
+        bias,
+        importance,
+        opportunities,
+        miss,
+        advance,
+        priority,
+        workplace
+    });
+
+    newEmployee.save()
+        .then(employee => {
+            res.redirect('/dashboard');
+        })
+        .catch(err => console.log(err));
+
+
+
+
+
+
 });
 
 

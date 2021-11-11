@@ -1,0 +1,113 @@
+<!-- navbar -->
+<div class="row justify-content-center">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+
+
+        <a class="navbar-brand" href="">Salary Transparency</a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="justify-content-center">
+                <ul class="nav nav-tabs">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Enter Company Details</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/dashboard">Enter Employee Details </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!--form-->
+
+<div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+
+        <div class="col-xl-15  col-lg-12 col-md12">
+
+            <div class="card o-hidden border-0 shadow-lg my-3 bg-light">
+
+                <div class="card-body py-5">
+                    <!-- Nested Row within Card Body -->
+                    <h1 class="h4 text-gray-900 mb-0 text-center font-weight-bold">Enter your information Here!</h1>
+
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <div class="p-5">
+
+                                <form class="company" action="" method="POST">
+                                    <div class="form-group mt-2 mb-2">
+                                        <label type="form-control">Company Name </label>
+                                        <input type="text" name="companyname" class="form-control form-control-user" autocomplete="off" placeholder="Enter your Company name" value='' required>
+                                    </div>
+                                    <div class="form-group mt-2 mb-2">
+                                        <label type="form-control"> Address </label>
+                                        <input type="text" name="address" class="form-control form-control-user" autocomplete="off" placeholder="Enter your address" value='' required>
+                                    </div>
+
+                                    <div class="form-group mt-2 mb-2">
+                                        <label type="form-control"> No. of Department </label>
+                                        <input type="number" name="noofdepartment" class="form-control form-control-user" autocomplete="off" placeholder="Enter the no. of Department" value='' required>
+                                    </div>
+                                    <div class="form-group mt-2 mb-2">
+                                        <label type="form-control"> No. of Employees </label>
+                                        <input type="number" name="noofemployees" class="form-control form-control-user" autocomplete="off" placeholder="Enter the no. of Employees" value='' required>
+                                    </div>
+                                    <div class="form-group mt-2 mb-2">
+                                        <label type="form-control"> Date of Establishment </label> <span class="text-danger">
+      <input type="date" name="dateofestablishment" class="form-control form-control-user" autocomplete="off" placeholder="Enter your Date of Establishment" value='' required>
+  </div>
+  <div class="form-group mt-2 mb-2">
+    <label type="form-control">Introduction </label>
+    <textarea class="form-control form-control-user" autocomplete="off" placeholder="Give your introduction" name="introduction"  rows="3"></textarea>
+
+</div>
+
+   
+
+
+                            <hr>
+
+                            <button type="submit" name="signup_btn" class="btn btn-primary btn-user btn-block">
+                                Submit
+                            </button>
+
+                            </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!--form end-->
+
+
+<a href="/users/logout" class="btn" id="logout">Logout</a>
+<div class="position-relative w-100">
+    <footer class="texts">
+        <div>
+            <a id="fot2" class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class=" fa fa-facebook fa-lg"></i> </a>
+            <a id="fot3" class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i> </a>
+            <a id="fot4" class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i> </a>
+            <a id="fot5" class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope fa-lg"></i> </a>
+        </div>
+    </footer>
+</div>
