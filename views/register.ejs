@@ -1,11 +1,14 @@
-<div class="row mt-5">
-  <div class="col-md-6 m-auto">
-    <div class="card card-body">
-      <h1 class="text-center mb-3">
-        <i class="fas fa-user-plus"></i> Register
-      </h1>
+<div id="box">
+  <div class="row mt-5" >
+    <div class="col-md-6 m-auto">
+      <img class="logoTopLeft" src="/img/logoWhite.png"></img>
+      <p id="texts"><br>descriptionS</p>
+      
+    <div class="card card-body col-lg-4 col-md-5 col-sm-8 col-auto" id="rightBox">
+      <p class="fontA">Salary Transparency</p>
+      <br>
       <%- include ("./partials/messages"); %>
-      <form action="/users/register" method="POST">
+      <form action="/users/register" method="POST" id="texts">
         <div class="form-group">
           <label for="name">Name</label>
           <input
@@ -49,12 +52,14 @@
             placeholder="Confirm Password"
             value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
           />
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">
+        </div><br>
+        <button type="submit" class="btn btn-primary btn-block" id="register">
           Register
         </button>
       </form>
-      <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
-    </div>
+      <p class="lead mt-4" id="texts">Have An Account?  <a href="/users/login">Login</a></p>
+    <hr>
+  </div>
+  </div>
   </div>
 </div>

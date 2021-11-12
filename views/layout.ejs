@@ -6,10 +6,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link
-      rel="stylesheet"
-      href="https://bootswatch.com/4/journal/bootstrap.min.css"
-    />
+    <style>
+      body {
+        background-color: #707672;
+      }
+      a{
+        text-decoration: none;
+      }
+      .pic {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position:absolute;
+      left:15%;
+}
+.rotLogo{
+    animation:circle 3s linear infinite;
+}
+@keyframes circle{
+  0%{
+    transform:rotate(0deg)
+              translate(0px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(90deg)
+              translate(0px)
+              rotate(90deg);
+  }
+}
+      .btn{
+        background-color: #707672;
+        color:white;
+        padding:5px;
+        text-decoration: none;
+        font-family: 'Berlin Sans FB', sans-serif;
+        font-size: 20px;
+        text-align: center;
+        font-weight:50;
+        border: 1px solid white;
+      }
+      .form-group{
+        font-size: 20px;
+      }
+      hr{
+        border: 1px solid black;
+      }
+      #email, #password, #name, #password2{
+        opacity:50%;
+        padding:5px;
+        background-color: none;
+      }
+      #texts{
+        font-family: 'Berlin Sans FB', sans-serif;
+        color:#707672;
+      }
+      .btn:hover, .search:hover{
+        border: 2px solid rgb(115, 255, 232);
+        opacity:100%;
+        background-color: black;
+      }
+      
+      .btn a{
+        color:white;
+      }
+      .rankTable{
+        background-color: white;
+        width:70%;
+        height:55%;
+        position:absolute;
+        bottom:5%;
+        right:5%;
+      }
+      .search{
+        padding-left:30px;
+        padding-right:30px;
+        background-color: white;
+        opacity:50%;
+        font-size:20px;
+        border-radius:50px;
+        position:absolute;
+        right:5%;
+        top:2%;
+      }
+      footer{
+        background-color: #a5c4b5;
+        padding:30px;
+        padding-bottom:0px;
+        position: relative;
+        width:100%;
+      }
+      #leftMid{
+        position:absolute;
+        top:7%;
+        left:30%;
+      }
+      .companyImg, .employeeImg{
+        position: absolute;
+        bottom:5%;
+        left:2%;
+        width:45%;
+      }
+      .aboutUs{
+        position:absolute;
+        width:40%;
+        left:10%;
+        text-align: left;
+      }
+      .aboutUsImg{
+        position:absolute;
+        left:53%;
+      }
+      #box{
+        background-color: #a5c4b5 ;
+        position: absolute;
+        width:90%;
+        right:5%;
+        height:90%;
+        top:5%;
+        border-radius: 30px;
+      }
+      #register, #login, #logout{
+        width:45%;
+        /* left:25%; */
+      }
+
+      #rightBox{
+        background-color: white;
+        position: absolute;
+        /* width:30%; */
+        right:0%;
+        height:100%;
+        top:0%;
+        border-radius: 30px;
+      }
+      .fontA, .fontB, .cc{
+        font-family: 'Berlin Sans FB', sans-serif;
+        color:#707672;
+        font-size: 40px;
+        text-align: center;
+        font-weight: 300;
+        line-height: 70px;
+      }
+      .fontB{
+        font-size: 30px;
+      }
+      #fot2, #fot3, #fot4, #fot5{
+        left:12%;
+        width:40px;
+      }
+      #fot3{
+        left:32%;
+      }
+      #fot4{
+        left:52%;
+      }
+      #fot5{
+        left:72%;
+      }
+      .cc{
+        text-align: center;
+        padding-top:10px;
+        font-size: 20px;
+      }
+      </style>
     <title>Document</title>
 </head>
 <body>
