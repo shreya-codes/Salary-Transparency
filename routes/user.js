@@ -5,7 +5,11 @@ const passport=require('passport');
 //User model
 const User = require('../models/User'); // now we can use methods on user
 
+//EMPLOYEEFORM page
+router.get('/employeeForm',(req,res)=> res.render('EmployeeForm'));
 
+//COMPANYFORM age
+ router.get('/companyForm',(req,res)=> res.render('CompanyForm'));
 
 //LOGIN page
 // router.get('/login',(req,res)=> res.send('Login'));
