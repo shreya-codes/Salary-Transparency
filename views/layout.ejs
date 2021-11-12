@@ -13,6 +13,29 @@
       a{
         text-decoration: none;
       }
+      .pic {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position:absolute;
+      left:15%;
+}
+.rotLogo{
+    animation:circle 3s linear infinite;
+}
+@keyframes circle{
+  0%{
+    transform:rotate(0deg)
+              translate(0px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(90deg)
+              translate(0px)
+              rotate(90deg);
+  }
+}
       .btn{
         background-color: #707672;
         color:white;
@@ -22,6 +45,7 @@
         font-size: 20px;
         text-align: center;
         font-weight:50;
+        border: 1px solid white;
       }
       .form-group{
         font-size: 20px;
@@ -70,10 +94,19 @@
         background-color: #a5c4b5;
         padding:30px;
         padding-bottom:0px;
-        left:0%;
-        bottom:0%;
-        position:absolute;
+        position: relative;
         width:100%;
+      }
+      #leftMid{
+        position:absolute;
+        top:7%;
+        left:30%;
+      }
+      .companyImg, .employeeImg{
+        position: absolute;
+        bottom:5%;
+        left:2%;
+        width:45%;
       }
       .aboutUs{
         position:absolute;
@@ -83,9 +116,7 @@
       }
       .aboutUsImg{
         position:absolute;
-        width:40%;
-        right:3%;
-        border:2px solid white;
+        left:53%;
       }
       #box{
         background-color: #a5c4b5 ;
@@ -96,10 +127,11 @@
         top:5%;
         border-radius: 30px;
       }
-      #register, #login{
+      #register, #login, #logout{
         width:45%;
-        left:25%;
+        /* left:25%; */
       }
+
       #rightBox{
         background-color: white;
         position: absolute;

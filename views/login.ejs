@@ -1,36 +1,43 @@
-<div class="row mt-5">
-  <div class="col-md-6 m-auto" id="box">
-    <div class="card card-body col-lg-4 col-md-5 col-sm-8 col-auto" id="rightBox">
+<div id="box">
+  <div class="row mt-5" >
+    <div class="col-md-6 m-auto">
+      <img class="logoTopLeft" src="/img/logoWhite.png"></img>
+      <p id="texts"><br>descriptionS</p>
       
-      <p class="fontA">Salary Transparency</p>
-      <br>
-      <%- include ("./partials/messages"); %>
-      <form action="/users/login" method="POST" id="texts">
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="form-control"
-            placeholder="Enter Email"
-          />
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            class="form-control"
-            placeholder="Enter Password"
-          />
-        </div><br><br>
-        <button type="submit" class="btn btn-primary btn-block" id="login">Login</button>
-      </form><br><hr>
-      <p class="lead mt-4" id="texts">
-        No Account? <a href="/users/register">Register</a>
-      </p>
+
+      <div class="card card-body col-lg-4 col-md-5 col-sm-8 col-auto" id="rightBox"> 
+        <p class="fontA">Salary Transparency</p>
+        <br>
+        <%- include ("./partials/messages"); %>
+        <form action="/users/login" method="POST" id="texts">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Enter Email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Enter Password"
+            />
+          </div><br><br>
+          <button type="submit" class="btn btn-primary btn-block" id="login">Login</button>
+        </form><br><hr>
+        <p class="lead mt-4" id="texts">
+          No Account? <a href="/users/register">Register</a>
+        </p>
+     </div>
+
+
     </div>
   </div>
 </div>

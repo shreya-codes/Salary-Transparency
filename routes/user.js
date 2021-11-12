@@ -8,6 +8,9 @@ const User = require('../models/User'); // now we can use methods on user
 //RANKING page
 router.get('/rankings',(req,res)=>res.render('Rankings'))
 
+//DASHBOARD page
+router.get('/dashboard',(req,res)=>res.render('Dashboard'))
+
 //EMPLOYEEFORM page
 router.get('/employeeForm',(req,res)=> res.render('EmployeeForm'));
 
