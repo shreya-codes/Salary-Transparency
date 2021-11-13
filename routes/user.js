@@ -5,6 +5,12 @@ const passport=require('passport');
 //User model
 const User = require('../models/User'); // now we can use methods on user
 
+//Employee Model
+const Employee = require('../models/employee');
+
+//Company Model
+const Company = require('../models/Company');
+
 //RANKING page
 router.get('/rankings',(req,res)=>res.render('Rankings'))
 
@@ -99,13 +105,7 @@ router.get('/login',(req,res)=> res.render('Login'));
 
 
         });
-       
-
-
-
     }
-    
-
  });
  //Login handle
  router.post('/login',(req,res,next)=>{
@@ -123,4 +123,60 @@ router.get('/login',(req,res)=> res.render('Login'));
      res.redirect('/users/login');
  })
 
-module.exports=router; //Module exports are the instruction that tells Node. js which bits of code (functions, objects, strings, etc.) to “export” from a given file so other files are allowed to access the exported code
+// module.exports=router; //Module exports are the instruction that tells Node. js which bits of code (functions, objects, strings, etc.) to “export” from a given file so other files are allowed to access the exported code
+
+//employee data submission handle
+router.post('/submit', (req, res) => {
+
+    const { name, gender, company, department, position, salary, experience, joineddate, stars, happiness, bias, importance, opportunities, miss, advance, priority, workplace } = req.body;
+
+    const newEmployee = new Employee({
+        name,
+        gender,
+        company,
+        department,
+        position,
+        salary,
+        experience,
+        joineddate,
+        stars,
+        happiness,
+        bias,
+        importance,
+        opportunities,
+        miss,
+        advance,
+        priority,
+        workplace
+    });
+
+    newEmployee.save()
+        .then(employee => {
+            res.redirect('/dashboard');
+        })
+        .catch(err => console.log(err));
+});
+
+
+router.post('/company', (req, res) => {
+    const { companyname, address, noofdepartment, noofemployees, dateofestablishment, introduction } = req.body;
+
+    const newCompany = new Company({
+        companyname,
+        address,
+        noofdepartment,
+        noofemployees,
+        dateofestablishment,
+        introduction
+    });
+
+
+    //save company
+
+    newCompany.save()
+        .then(Company => {
+            res.redirect('/dashboard');
+        })
+        .catch(err => console.log(err));
+})
+module.exports = router; //Module exports are the instruction that tells Node. js which bits of code (functions, objects, strings, etc.) to “export” from a given file so other files are allowed to access the exported code
