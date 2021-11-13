@@ -50,8 +50,8 @@ app.listen(PORT,console.log(`Server started on port ${PORT}`));
 
 //Static files
 app.use(express.static('public'))
-app.use('/css',express.static(__dirname + 'public/css'))
-app.use('/img',express.static(__dirname + 'public/img'))
+app.use('/css',express.static(__dirname + 'public/css'));
+app.use('/img',express.static(__dirname + 'public/img'));
 
 app.set('views','./views')
 

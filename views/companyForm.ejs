@@ -1,19 +1,15 @@
 <div id="box">
     <div class="row mt-5" >
       <div class="col-md-6 m-auto">
-        <div class="logoGray"></div>
-        <div class="card card-body col-6 col-auto" id="rightBox">
-          <p class="fontA">Salary Transparency</p>
-          
+          <div class="pic"><img src="/img/logoWhite.png" class="rotLogo"></img></div>
+          <img class="companyImg" src="/img/company.png">
+          <div class="card card-body col-6 col-auto" id="rightBox">
+            <p class="fontA">Salary Transparency</p>
 
-          <div class="container" id="texts"   style=" position: absolute; overflow-y: scroll; height:80%; top:11%; ">
-            <div class="row justify-content-center">
-                <div class="vertical-scrollable p-0">
-                    <br><br><br>
-                                        <div class="p-5" style="position:absolute; top:0%; width:90%;">
-                                            <div class="text-center">
-                                            </div>
-                                            <form class="company" action="" method="POST">
+            <div class="container" id="texts"   style=" position: absolute; overflow-y: scroll; height:80%; top:11%; ">
+                <div class="row justify-content-center">
+                                        <div class="p-5 p5">
+                                            <form class="company" action="/users/company" method="POST">
                                                 <div class="form-group mt-2 mb-2">
                                                     <label type="form-control">Company Name </label>
                                                     <input type="text" name="companyname" class="form-control form-control-user" autocomplete="off" placeholder="Enter your Company name" value='' required>
@@ -22,26 +18,30 @@
                                                     <label type="form-control"> Address </label>
                                                     <input type="text" name="address" class="form-control form-control-user" autocomplete="off" placeholder="Enter your address" value='' required>
                                                 </div>
+            
                                                 <div class="form-group mt-2 mb-2">
-                                                    <label type="form-control"> Salary </label>
-                                                    <input type="number" name="salary" class="form-control form-control-user" autocomplete="off" placeholder="Enter your salary" value='' required>
+                                                    <label type="form-control"> No. of Department </label>
+                                                    <input type="number" name="noofdepartment" class="form-control form-control-user" autocomplete="off" placeholder="Enter the no. of Department" value='' required>
+                                                </div>
+                                                <div class="form-group mt-2 mb-2">
+                                                    <label type="form-control"> No. of Employees </label>
+                                                    <input type="number" name="noofemployees" class="form-control form-control-user" autocomplete="off" placeholder="Enter the no. of Employees" value='' required>
                                                 </div>
                                                 <div class="form-group mt-2 mb-2">
                                                     <label type="form-control"> Date of Establishment </label> <span class="text-danger">
-                  <input type="date" name="dateofestablishment" class="form-control form-control-user" autocomplete="off" placeholder="Enter your Date of Establishment" value='' required>
-              </div>
-              <div class="form-group mt-2 mb-2">
-                <label type="form-control">Introduction </label>
-                <textarea class="form-control form-control-user" autocomplete="off" placeholder="Give your introduction" name="introduction"  rows="3"></textarea>
+                                                    <input type="date" name="dateofestablishment" class="form-control form-control-user" autocomplete="off" placeholder="Enter your Date of Establishment" value='' required>
+                                                </div>
+                                                <div class="form-group mt-2 mb-2">
+                                                    <label type="form-control">Introduction </label>
+                                                    <textarea class="form-control form-control-user" autocomplete="off" placeholder="Give your introduction" name="introduction"  rows="3"></textarea>
+                                                </div>
+                                                <hr>
+                                                <button type="submit" name="signup_btn" class="btn btn-primary btn-user btn-block" style="padding-left:30px; padding-right:30px;">Submit</button>
+                                            </form>
+                                        </div>
+                 </div>
             </div>
-                                        <hr>
-                                        <button type="submit" name="signup_btn" class="btn btn-primary btn-user btn-block" style="padding-left:30px; padding-right:30px;">
-                                            Submit
-                                        </button>
-                                        </form>
-                                    </div>
-            </div>
+          </div>
         </div>
-      </div>
     </div>
-    </div>
+</div>
