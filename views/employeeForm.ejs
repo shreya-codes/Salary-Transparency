@@ -10,308 +10,295 @@
           
           <div class="container" id="texts"   style=" position: absolute; overflow-y: scroll; height:75%; top:13%; ">
 
-            <!-- Outer Row -->
             <div class="row justify-content-center">
-                <div class="vertical-scrollable p-0">
-                    <br><br><br>
-                                        <div class="p-5 p5">
-                                            <div class="text-center">
+                                    <div class="p-5 p5">
+                                        <div class="text-center"></div>
+                                        <form class="user" action="/users/submit" method="POST">
+                                            <div class="form-group mt-2 mb-2">
+                                                <label type="form-control"> Name </label>
+                                                <input type="text" name="name" class="form-control form-control-user" autocomplete="off" placeholder="Enter your name" required>
                                             </div>
-                                            <form class="user" action="" method="POST">
-                                                <div class="form-group mt-2 mb-2">
-                                                    <label type="form-control"> Name </label>
-                                                    <input type="text" name="username" class="form-control form-control-user" autocomplete="off" placeholder="Enter your name" value='' required>
+                                            <div class="form-group mt-2 mb-2 ">
+                                                <label type="form-control"> Gender </label><br>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="gender" value="male" required>
+                                                    <label class="form-check-label" for="inlineRadio1">  Male 	</label>
                                                 </div>
-                                                <div class="form-group mt-2 mb-2">
-                                                    <label type="form-control"> Gender </label><br>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="bias" value="1">
-                                                        <label class="form-check-label" for="inlineRadio1">Male</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="bias" value="2">
-                                                        <label class="form-check-label" for="inlineRadio1">Female</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="bias" value="3">
-                                                        <label class="form-check-label" for="inlineRadio1">Other</label>
-                                                    </div>
-        
+                                                <div class="form-check form-check-inline ">
+                                                    <input class="form-check-input" type="radio" name="gender" value="female">
+                                                    <label class="form-check-label" for="inlineRadio1">Female</label>
                                                 </div>
-
-
-                                                <div class="form-group mt-2 mb-2">
-                                                    <label type="form-control"> Company </label>
-
-                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                            </div>
+                                            <div class="form-group mt-2 mb-2">
+                                                <label type="form-control"> Company </label>
+                                                <select class="form-control" id="exampleFormControlSelect1" name="company">
                                                       <option>Company 1</option>
                                                       <option>Company 2</option>
                                                       <option>Company 3</option>
                                                       <option>Company 4</option>
                                                       <option>Company 5</option>
-                                                    </select>
+                                                </select>
+                                            </div>
+                                            <div class="form-group mt-2 mb-2">
+                                                <label type="form-control"> Department </label>
+                                                <input type="text" name="department" class="form-control form-control-user" autocomplete="off" placeholder="Enter your department" value='' required>
+                                            </div>
+                                            <div class="form-group mt-2 mb-2">
+                                                <label type="form-control"> Position </label>
+                                                <input type="text" name="position" class="form-control form-control-user" autocomplete="off" placeholder="Enter your position" value='' required>
+                                            </div>
+                                            <div class="form-group mt-2 mb-2">
+                                                <label type="form-control"> Salary </label>
+                                                <input type="number" name="salary" class="form-control form-control-user" autocomplete="off" placeholder="Enter your salary" value='' required>
+                                            </div>
+                                            <div class="form-group mt-2 mb-2">
+                                                <label type="form-control"> Experience </label>
+                                                <input type="text" name="experience" class="form-control form-control-user" autocomplete="off" placeholder="Enter your experience" value='' required>
+                                            </div>
+                                            <div class="form-group mt-2 mb-2">
+                                                <label type="form-control"> Joined Date </label>
+                                                <input type="date" name="joineddate" class="form-control form-control-user" autocomplete="off" placeholder="Enter your Joined Date" value='' required>
+                                            </div>
+                                            <hr>
+                                            <h2> Some questions</h2>
+                                            <hr>
+                                            <div class="form-group mt-2 mb-2">
+                                                <label type="form-control"> Rate the company you work in based on gender equality. </label> <br>
+                                                <div class="rating"><label>
+                                                    <input type="radio" name="stars" value="1" required/>
+                                                        <span class="icon">★</span></label>
+                                                    <label>
+                                                        <input type="radio" name="stars" value="2" />
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="stars" value="3" />
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>   
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="stars" value="4" />
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="stars" value="5" />
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                        <span class="icon">★</span>
+                                                    </label>
                                                 </div>
-                                                <div class="form-group mt-2 mb-2">
-                                                    <label type="form-control"> Department </label>
-                                                    <input type="text" name="department" class="form-control form-control-user" autocomplete="off" placeholder="Enter your department" value='' required>
+                                            </div>
+                                            <hr>
+                                            <!-- Survey questions-->
+        
+                                            <!-- question1-->
+                                            <div class="form-group mt-2 mb-2">
+                                                <label type="form-control"> How happy or unhappy are you with the current role at your job? </label><br>
+                                                <div class="px-2">
+                                                    <div class="form-check form-check-inline d-block">
+                                                        <input class="form-check-input" type="radio" name="happiness" value="5" required>
+                                                        <label class="form-check-label" for="inlineRadio1">Very happy</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline d-block ">
+                                                        <input class="form-check-input" type="radio" name="happiness" value="4">
+                                                        <label class="form-check-label" for="inlineRadio1 ">Somewhat happy</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline d-block">
+                                                        <input class="form-check-input" type="radio" name="happiness" value="3">
+                                                        <label class="form-check-label" for="inlineRadio1">Neither happy nor unhappy</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline d-block">
+                                                        <input class="form-check-input" type="radio" name="happiness" value="2">
+                                                        <label class="form-check-label" for="inlineRadio1">Somewhat unhappy</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline d-block">
+                                                        <input class="form-check-input" type="radio" name="happiness" value="1">
+                                                        <label class="form-check-label" for="inlineRadio1">Very unhappy</label>
+                                                    </div>
                                                 </div>
-                                                <div class="form-group mt-2 mb-2">
-                                                    <label type="form-control"> Position</label><br>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="bias" value="1">
-                                                        <label class="form-check-label" for="inlineRadio1">Beginner</label>
+                                            </div>
+        
+                                            <hr>
+        
+        
+                                            <!-- question2-->
+                                            <div class="form-group mt-2 mb-2">
+                                                <label type="form-control"> Have you ever witnessed or experienced biasness because of gender in the company you work in?   </label><br>
+                                                <div class="px-2">
+                                                    <div class="form-check form-check-inline d-block">
+                                                        <input class="form-check-input" type="radio" name="bias" value="1" required>
+                                                        <label class="form-check-label" for="inlineRadio1">Yes</label>
                                                     </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="bias" value="2">
-                                                        <label class="form-check-label" for="inlineRadio1">Intermediate</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="bias" value="3">
-                                                        <label class="form-check-label" for="inlineRadio1">Senior</label>
+                                                    <div class="form-check form-check-inline d-block">
+                                                        <input class="form-check-input" type="radio" name="bias" value="5">
+                                                        <label class="form-check-label" for="inlineRadio1">No</label>
                                                     </div>
         
                                                 </div>
-                                                <div class="form-group mt-2 mb-2">
-                                                    <label type="form-control"> Salary </label>
-                                                    <input type="number" name="salary" class="form-control form-control-user" autocomplete="off" placeholder="Enter your salary" value='' required>
+        
+        
+                                            </div>
+                                            <hr>
+                                            <!-- question3-->
+                                            <div class="form-group mt-2 mb-2">
+                                                <label type="form-control"> While determining promotions at your organization, how much importance does your company give to gender?  </label><br>
+                                                <div class="px-2">
+                                                    <div class="form-check form-check-inline d-block">
+                                                        <input class="form-check-input" type="radio" name="importance" value="1" required>
+                                                        <label class="form-check-label" for="inlineRadio1">Extremely important</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline d-block">
+                                                        <input class="form-check-input" type="radio" name="importance" value="2">
+                                                        <label class="form-check-label" for="inlineRadio1">	Very important		</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline d-block">
+                                                        <input class="form-check-input" type="radio" name="importance" value="3">
+                                                        <label class="form-check-label" for="inlineRadio1">Somewhat important </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline d-block">
+                                                        <input class="form-check-input" type="radio" name="importance" value="4">
+                                                        <label class="form-check-label" for="inlineRadion">	Not too important	</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline d-block ">
+                                                        <input class="form-check-input" type="radio" name="importance" value="5">
+                                                        <label class="form-check-label" for="inlineRadio1">Not important at all</label>
+                                                    </div>
                                                 </div>
+        
+                                                <hr>
+                                                <!-- question4-->
                                                 <div class="form-group mt-2 mb-2">
-                                                    <label type="form-control"> Experience </label>
-                                                    <input type="text" name="experience" class="form-control form-control-user" autocomplete="off" placeholder="Enter your experience" value='' required>
-                                                </div>
-                                                <div class="form-group mt-2 mb-2">
-                                                    <label type="form-control"> Joined Date </label> <span class="text-danger">
-                      <input type="date" name="joineddate" class="form-control form-control-user" autocomplete="off" placeholder="Enter your Joined Date" value='' required>
-                  </div>
-<hr>
-<h2> Some questions</h2>
-<hr>
-                  <div class="form-group mt-2 mb-2">
-                    <label type="form-control"> Rate the company you work in based on gender equality. </label> <br>
-                    <div class="rating">
-                      <label>
-                        <input type="radio" name="stars" value="1" />
-                        <span class="icon">★</span>
-                                                    </label>
-                                                    <label>
-                        <input type="radio" name="stars" value="2" />
-                        <span class="icon">★</span>
-                        <span class="icon">★</span>
-                      </label>
-                                                    <label>
-                        <input type="radio" name="stars" value="3" />
-                        <span class="icon">★</span>
-                        <span class="icon">★</span>
-                        <span class="icon">★</span>   
-                      </label>
-                                                    <label>
-                        <input type="radio" name="stars" value="4" />
-                        <span class="icon">★</span>
-                        <span class="icon">★</span>
-                        <span class="icon">★</span>
-                        <span class="icon">★</span>
-                      </label>
-                                                    <label>
-                        <input type="radio" name="stars" value="5" />
-                        <span class="icon">★</span>
-                        <span class="icon">★</span>
-                        <span class="icon">★</span>
-                        <span class="icon">★</span>
-                        <span class="icon">★</span>
-                      </label>
-
-                                                </div>
-
-
-                                        </div>
-                                        <hr>
-                                        <!-- Survey questions-->
-
-                                        <!-- question1-->
-                                        <div class="form-group mt-2 mb-2">
-                                            <label type="form-control"> How happy or unhappy are you with the current role at your job? </label><br>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="happiness" value="5">
-                                                <label class="form-check-label" for="inlineRadio1">Very happy</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="happiness" value="4">
-                                                <label class="form-check-label" for="inlineRadio1">Somewhat happy</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="happiness" value="3">
-                                                <label class="form-check-label" for="inlineRadio1">Neither happy nor unhappy</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="happiness" value="2">
-                                                <label class="form-check-label" for="inlineRadio1">Somewhat unhappy</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="happiness" value="1">
-                                                <label class="form-check-label" for="inlineRadio1">Very unhappy</label>
-                                            </div>
-                                        </div>
-
-                                        <hr>
-
-
-                                        <!-- question2-->
-                                        <div class="form-group mt-2 mb-2">
-                                            <label type="form-control"> Have you ever witnessed or experienced biasness because of gender in the company you work in?   </label><br>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="bias" value="1">
-                                                <label class="form-check-label" for="inlineRadio1">Yes</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="bias" value="5">
-                                                <label class="form-check-label" for="inlineRadio1">No</label>
-                                            </div>
-
-                                        </div>
-                                        <hr>
-                                        <!-- question3-->
-                                        <div class="form-group mt-2 mb-2">
-                                            <label type="form-control"> While determining promotions at your organization, how much importance does your company give to gender?  </label><br>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="importance" value="1">
-                                                <label class="form-check-label" for="inlineRadio1">Extremely important</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="importance" value="2">
-                                                <label class="form-check-label" for="inlineRadio1">	Very important		</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="importance" value="3">
-                                                <label class="form-check-label" for="inlineRadio1">Somewhat important </label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="importance" value="4">
-                                                <label class="form-check-label" for="inlineRadio1">	Not too important	</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="importance" value="5">
-                                                <label class="form-check-label" for="inlineRadio1">Not important at all</label>
-                                            </div>
-                                        </div>
-
-                                        <hr>
-                                        <!-- question4-->
-                                        <div class="form-group mt-2 mb-2">
-                                            <label type="form-control"> In your organization, do you think that women have more, fewer or the same opportunities to advance as men?  </label><br>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="opportunities" value="1">
-                                                <label class="form-check-label" for="inlineRadio1">Women have more opportunities than men
+                                                    <label type="form-control"> In your organization, do you think that women have more, fewer or the same opportunities to advance as men?  </label><br>
+                                                    <div class="px-2">
+                                                        <div class="form-check form-check-inline d-block">
+                                                            <input class="form-check-input" type="radio" name="opportunities" value="1" required>
+                                                            <label class="form-check-label" for="inlineRadio1">Women have more opportunities than men
                                                     
                                                     </label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="opportunities" value="1">
-                                                <label class="form-check-label" for="inlineRadio1">	Women have fewer opportunities than men
-                                                    		</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="opportunities" value="5">
-                                                <label class="form-check-label" for="inlineRadio1">Women and men have the same opportunities </label>
-                                            </div>
-
-                                        </div>
-
-                                        <hr>
-                                        <!-- question5-->
-                                        <div class="form-group mt-2 mb-2">
-                                            <label type="form-control"> Have you ever felt that your gender has played a role in your missing out on a raise, promotion, key assignment, or chance to get ahead?   </label><br>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="miss" value="1">
-                                                <label class="form-check-label" for="inlineRadio1">Yes</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="miss" value="5">
-                                                <label class="form-check-label" for="inlineRadio1">No</label>
-                                            </div>
-
-                                        </div>
-                                        <hr>
-                                        <!-- question6-->
-                                        <div class="form-group mt-2 mb-2">
-                                            <label type="form-control"> Going forward, do you think your gender will make it harder or easier for you to advance in your career?  </label><br>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="advance" value="1">
-                                                <label class="form-check-label" for="inlineRadio1">Easier
-            
-            </label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="advance" value="5">
-                                                <label class="form-check-label" for="inlineRadio1">Won't make much difference.
-                    </label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="advance" value="1">
-                                                <label class="form-check-label" for="inlineRadio1">Harder </label>
-                                            </div>
-
-                                        </div>
-                                        <hr>
-
-                                        <!-- question7-->
-
-                                        <div class="form-group mt-2 mb-2">
-                                            <label type="form-control"> How much of a priority is gender diversity to the company you work in?
+                                                        </div>
+                                                        <div class="form-check form-check-inline d-block ">
+                                                            <input class="form-check-input" type="radio" name="opportunities" value="1">
+                                                            <label class="form-check-label" for="inlineRadio1">	Women have fewer opportunities than men
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline d-block">
+                                                            <input class="form-check-input" type="radio" name="opportunities" value="5">
+                                                            <label class="form-check-label" for="inlineRadio1">Women and men have the same opportunities </label>
+                                                        </div>
+                                                    </div>
+        
+        
+                                                </div>
+        
+                                                <hr>
+                                                <!-- question5-->
+                                                <div class="form-group mt-2 mb-2">
+                                                    <label type="form-control"> Have you ever felt that your gender has played a role in your missing out on a raise, promotion, key assignment, or chance to get ahead?   </label><br>
+                                                    <div class="px-2 ">
+                                                        <div class="form-check form-check-inline d-block">
+                                                            <input class="form-check-input" type="radio" name="miss" value="1" required>
+                                                            <label class="form-check-label" for="inlineRadion">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline d-block">
+                                                            <input class="form-check-input" type="radio" name="miss" value="5">
+                                                            <label class="form-check-label" for="inlineRadio1">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <!-- question6-->
+                                                <div class="form-group mt-2 mb-2">
+                                                    <label type="form-control"> Going forward, do you think your gender will make it harder or easier for you to advance in your career?  </label><br>
+                                                    <div class="px-2">
+                                                        <div class="form-check form-check-inline d-block">
+                                                            <input class="form-check-input" type="radio" name="advance" value="2" required>
+                                                            <label class="form-check-label" for="inlineRadio1">Easier</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline d-block">
+                                                            <input class="form-check-input" type="radio" name="advance" value="5">
+                                                            <label class="form-check-label" for="inlineRadio1">Won't make much difference.</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline d-block">
+                                                            <input class="form-check-input" type="radio" name="advance" value="1">
+                                                            <label class="form-check-label" for="inlineRadio1">Harder </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+        
+                                                <!-- question7-->
+        
+                                                <div class="form-group mt-2 mb-2">
+                                                    <label type="form-control"> How much of a priority is gender diversity to the company you work in?
                                               
                                                   </label><br>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="priority" value="5">
-                                                <label class="form-check-label" for="inlineRadio1">  The most important priority 	</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="priority" value="4">
-                                                <label class="form-check-label" for="inlineRadio1">A top priority, but not the most important	</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="priority" value="3">
-                                                <label class="form-check-label" for="inlineRadio1">Important but lower priority		 </label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="priority" value="2">
-                                                <label class="form-check-label" for="inlineRadio1">	Not too important</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="priority" value="1">
-                                                <label class="form-check-label" for="inlineRadio1">Not important at all</label>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <!-- question8-->
-
-                                        <div class="form-group mt-2 mb-2">
-                                            <label type="form-control"> How do you think the company you work in is doing to increase gender equality and diversity at your workplace?
+                                                    <div class="px-2">
+                                                        <div class="form-check form-check-inline d-block">
+                                                            <input class="form-check-input" type="radio" name="priority" value="5" required>
+                                                            <label class="form-check-label" for="inlineRadio1">  The most important priority 	</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline d-block">
+                                                            <input class="form-check-input" type="radio" name="priority" value="4">
+                                                            <label class="form-check-label" for="inlineRadio1">A top priority, but not the most important	</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline d-block">
+                                                            <input class="form-check-input" type="radio" name="priority" value="3">
+                                                            <label class="form-check-label" for="inlineRadio1">Important but lower priority		 </label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline d-block">
+                                                            <input class="form-check-input" type="radio" name="priority" value="2">
+                                                            <label class="form-check-label" for="inlineRadio1">	Not too important</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline d-block">
+                                                            <input class="form-check-input" type="radio" name="priority" value="1">
+                                                            <label class="form-check-label" for="inlineRadio1">Not important at all</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <!-- question8-->
+        
+                                                <div class="form-group mt-2 mb-2">
+                                                    <label type="form-control"> How do you think the company you work in is doing to increase gender equality and diversity at your workplace?
                                               
                                                   </label><br>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="workplace" value="5">
-                                                <label class="form-check-label" for="inlineRadio1">  It's a perfect balance.	</label>
-                                            </div>
-
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="workplace" value="3">
-                                                <label class="form-check-label" for="inlineRadio1">Should do more.	 </label>
-                                            </div>
-
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="workplace" value="1">
-                                                <label class="form-check-label" for="inlineRadio1">Should start on it.</label>
-                                            </div>
+                                                    <div class="mx-2">
+                                                        <div class="form-check form-check-inline d-block">
+                                                            <input class="form-check-input" type="radio" name="workplace" value="5" required>
+                                                            <label class="form-check-label" for="inlineRadio1">  It's a perfect balance.	</label>
+                                                        </div>
+        
+                                                        <div class="form-check form-check-inline d-block">
+                                                            <input class="form-check-input" type="radio" name="workplace" value="3">
+                                                            <label class="form-check-label" for="inlineRadio1">Should do more.	 </label>
+                                                        </div>
+        
+                                                        <div class="form-check form-check-inline d-block">
+                                                            <input class="form-check-input" type="radio" name="workplace" value="1">
+                                                            <label class="form-check-label" for="inlineRadio1">Should start on it.</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+        
+        
+        
+                                                <hr>
+        
+                                                <button type="submit" name="employee_btn" class="btn btn-primary btn-user btn-block" style="padding-left:30px; padding-right:30px;">Submit</button>
+                                            </form>
                                         </div>
-                                        <hr>
-                                        <button type="submit" name="employee_btn" class="btn btn-primary btn-user btn-block" style="padding-left:30px; padding-right:30px;">
-                                             Submit
-                                          </button>
-
-                                        </form>
-                                    </div>
                 </div>
             </div>
         </div>
-        </div>
     </div>
 </div>
+</div>
+
+        
