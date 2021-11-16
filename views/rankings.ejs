@@ -15,84 +15,33 @@
         Our <br> Rankings
     </div>
     <div class="rankTable" id="texts" style="overflow-y: scroll;">
+       
         <table class="table">
             <tr class="heading">
-              <td>Rank</td>
+              <td>S.No.</td>
               <td>Name</td>
-              <td>Others</td>
-              <td>Others</td>
-              <td>Others</td>
+              <td>Biasness</td>
+              <td>Importance</td>
+              <td>Oppurtunities</td>
+              <td>MissedOuts</td>
+              <td>Priority</td>
+              <td>Empowerment</td>
+              <td>Average Rating</td>
             </tr>
+            <% for(var i=0; i<employeeRankings.length; i++){ %>
+
             <tr>
-              <td>1</td>
-              <td>Company Name</td>
-              <td>Others</td>
-              <td>Others</td>
-              <td>Others</td>
+              <td><%=i+1%></td>
+              <td><%=employeeRankings[i]._id%></td>
+              <td><%=employeeRankings[i].avgBiasness.toFixed(2)%></td>
+              <td><%=employeeRankings[i].avgImportance.toFixed(2)%></td>
+              <td><%=employeeRankings[i].avgOpportunities.toFixed(2)%></td>
+              <td><%=employeeRankings[i].avgMissedout.toFixed(2)%></td>
+              <td><%=employeeRankings[i].avgPriority.toFixed(2)%></td>
+              <td><%=employeeRankings[i].avgEmpowerment.toFixed(2)%></td>
+              <td><%=employeeRankings[i].totalAvg.toFixed(2)%></td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>Company Name</td>
-                <td>Others</td>
-                <td>Others</td>
-                <td>Others</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Company Name</td>
-                <td>Others</td>
-                <td>Others</td>
-                <td>Others</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Company Name</td>
-                <td>Others</td>
-                <td>Others</td>
-                <td>Others</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>Company Name</td>
-                <td>Others</td>
-                <td>Others</td>
-                <td>Others</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Company Name</td>
-                <td>Others</td>
-                <td>Others</td>
-                <td>Others</td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>Company Name</td>
-                <td>Others</td>
-                <td>Others</td>
-                <td>Others</td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>Company Name</td>
-                <td>Others</td>
-                <td>Others</td>
-                <td>Others</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Company Name</td>
-                <td>Others</td>
-                <td>Others</td>
-                <td>Others</td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>Company Name</td>
-                <td>Others</td>
-                <td>Others</td>
-                <td>Others</td>
-              </tr>
+           <%}%>
           </table>
     </div>
 </div>

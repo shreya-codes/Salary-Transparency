@@ -1,0 +1,254 @@
+body {
+    background-color: #707672;
+  }
+  a{
+    text-decoration: none;
+  }
+  .pic {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:absolute;
+  left:15%;
+}
+.rotLogo{
+animation:circle 3s linear infinite;
+}
+@keyframes circle{
+0%{
+transform:rotate(0deg)
+          translate(0px)
+          rotate(0deg);
+
+}
+100%{
+transform:rotate(90deg)
+          translate(0px)
+          rotate(90deg);
+}
+}
+  .btn{
+    background-color: #707672;
+    color:white;
+    padding:5px;
+    text-decoration: none;
+    font-family: 'Berlin Sans FB', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight:50;
+    border: 1px solid white;
+  }
+  .form-group{
+    font-size: 20px;
+  }
+  hr{
+    border: 1px solid black;
+  }
+  #email, #password, #name, #password2{
+    opacity:50%;
+    padding:5px;
+    background-color: none;
+  }
+  #texts{
+    font-family: 'Berlin Sans FB', sans-serif;
+    color:#707672;
+  }
+  .btn:hover, .search:hover{
+    border: 2px solid rgb(115, 255, 232);
+    opacity:100%;
+    background-color: black;
+  }
+  
+  .btn a{
+    color:white;
+  }
+  .rankTable{
+    background-color: white;
+    width:70%;
+    height:55%;
+    position:absolute;
+    bottom:5%;
+    right:5%;
+  }
+  .search{
+    padding-left:30px;
+    padding-right:30px;
+    background-color: white;
+    opacity:50%;
+    font-size:20px;
+    border-radius:50px;
+    position:absolute;
+    right:5%;
+    top:2%;
+  }
+  .sidebar{
+    background-color: #a5c4d5; position:absolute; height:100%; left:0%;
+  }
+  .logout{
+    position:absolute; bottom:5%; left:25%;
+  }
+  #rank{
+      font-size:80px; color:white; font-weight:400; line-height:80px; text-align:left; position:absolute; width:72%; right:0%;
+  }
+  .table{
+    width:100%; font-size:23px; padding-left:3px;
+  }
+  .heading{
+    font-size: 27px; font-weight: 450; background-color:#dddddd;
+  }
+  .p5{
+    position:absolute; top:0%; width:90%;
+  }
+  footer{
+    background-color: #a5c4b5;
+    padding:25px;
+    padding-bottom:0px;
+    width:100%;
+    position: absolute;
+    left:0%;
+  }
+  .navigation{
+    position: fixed; right:1%; top:2%; width:20%;
+  }
+  .navigation a{
+    padding-left:30px; padding-right:30px;
+  }
+  #leftMid{
+    position:absolute;
+    top:7%;
+    left:30%;
+  }
+  .companyImg, .employeeImg{
+    position: absolute;
+    bottom:5%;
+    left:2%;
+    width:45%;
+  }
+  .aboutUs{
+    position:absolute;
+    width:40%;
+    left:10%;
+    text-align: left;
+  }
+  .aboutUsImg{
+    position:absolute;
+    left:53%;
+  }
+  #box{
+    background-color: #a5c4b5 ;
+    position: absolute;
+    width:90%;
+    right:5%;
+    height:90%;
+    top:5%;
+    border-radius: 30px;
+  }
+
+  #register, #login, #logout{
+    width:45%;
+    /* left:25%; */
+  }
+
+  #rightBox{
+    background-color: white;
+    position: absolute;
+    /* width:30%; */
+    right:0%;
+    height:100%;
+    top:0%;
+    border-radius: 30px;
+  }
+  .fontA, .fontB, .cc{
+    font-family: 'Berlin Sans FB', sans-serif;
+    color:#707672;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 70px;
+  }
+  .fontB{
+    font-size: 30px;
+  }
+  #fot2, #fot3, #fot4, #fot5{
+    left:12%;
+    width:40px;
+  }
+  #fot3{
+    left:32%;
+  }
+  #fot4{
+    left:52%;
+  }
+  #fot5{
+    left:72%;
+  }
+  .cc{
+    text-align: center;
+    padding-top:10px;
+    font-size: 20px;
+  }
+  .rating {
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    font-size: 50px;
+}
+
+.rating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+}
+
+.rating label:last-child {
+    position: static;
+}
+
+.rating label:nth-child(1) {
+    z-index: 5;
+}
+
+.rating label:nth-child(2) {
+    z-index: 4;
+}
+
+.rating label:nth-child(3) {
+    z-index: 3;
+}
+
+.rating label:nth-child(4) {
+    z-index: 2;
+}
+
+.rating label:nth-child(5) {
+    z-index: 1;
+}
+
+.rating label input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.rating label .icon {
+    float: left;
+    color: transparent;
+}
+
+.rating label:last-child .icon {
+    color: #000;
+}
+
+.rating:not(:hover) label input:checked~.icon,
+.rating:hover label:hover input~.icon {
+    color: gold;
+}
+
+.rating label input:focus:not(:checked)~.icon:last-child {
+    color: ghostwhite;
+    text-shadow: gold;
+}

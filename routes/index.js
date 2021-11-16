@@ -3,7 +3,7 @@ const router= express.Router();// creates a new router object to handle requests
 const { ensureAuthenticated }= require('../config/auth');
 
 //welcome page
-router.get('/',(req,res)=> res.render('Welcome'));
+router.get('/',(req,res)=> res.render('welcome'));
 //dashboard
 router.get('/dashboard',ensureAuthenticated ,(req,res)=>
 res.render('dashboard',{

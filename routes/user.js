@@ -12,24 +12,55 @@ const Employee = require('../models/employee');
 const Company = require('../models/Company');
 
 //RANKING page
-router.get('/rankings',(req,res)=>res.render('Rankings'))
+router.get('/rankings', async (req,res)=>
+{
+  const employeeRankings = await Employee.aggregate([
+    {$match:{}},
+    {  $group:
+      {
+        _id: "$company",
+        avgBiasness: { $avg: "$bias" },
+        avgImportance: { $avg: "$importance" },
+        avgOpportunities: { $avg: "$opportunities" },
+        avgMissedout: { $avg: "$miss" },
+        avgPriority: { $avg: "$priority" },
+        avgEmpowerment: { $avg: "$empowerment" }
+      }},
+      {
+        $addFields: {
+            totalSum: {
+                $add: [ "$avgBiasness", "$avgImportance","$avgOpportunities", "$avgMissedout", "$avgPriority", "$avgEmpowerment" ]
+            }
+        }},
+     
+        {
+          $addFields: {
+              totalAvg: {
+                  $divide: [ "$totalSum", 6 ]
+              }
+          }
+      }
+  ]) // returns array
+  console.log(employeeRankings)
+  res.render('rankings', {employeeRankings})
+})
 
 //DASHBOARD page
-router.get('/dashboard',(req,res)=>res.render('Dashboard'))
+router.get('/dashboard',(req,res)=>res.render('dashboard'))
 
 //EMPLOYEEFORM page
-router.get('/employeeForm',(req,res)=> res.render('EmployeeForm'));
+router.get('/employeeForm',(req,res)=> res.render('employeeForm'));
 
 //COMPANYFORM age
- router.get('/companyForm',(req,res)=> res.render('CompanyForm'));
+ router.get('/companyForm',(req,res)=> res.render('companyForm'));
 
 //LOGIN page
 // router.get('/login',(req,res)=> res.send('Login'));
-router.get('/login',(req,res)=> res.render('Login'));
+router.get('/login',(req,res)=> res.render('login'));
 
 //Register
 // router.get('/register',(req,res)=> res.send('Register'));
- router.get('/register',(req,res)=> res.render('Register'));
+ router.get('/register',(req,res)=> res.render('register'));
 
  //Register handle 
  router.post('/register',(req ,res )=>{
@@ -128,7 +159,7 @@ router.get('/login',(req,res)=> res.render('Login'));
 //employee data submission handle
 router.post('/submit', (req, res) => {
 
-    const { name, gender, company, department, position, salary, experience, joineddate, stars, happiness, bias, importance, opportunities, miss, advance, priority, workplace } = req.body;
+    const { name, gender, company, department, position, salary, experience, joineddate, stars, bias, importance, opportunities, miss, advance, priority, empowerment } = req.body;
 
     const newEmployee = new Employee({
         name,
@@ -140,19 +171,19 @@ router.post('/submit', (req, res) => {
         experience,
         joineddate,
         stars,
-        happiness,
         bias,
         importance,
         opportunities,
         miss,
         advance,
         priority,
-        workplace
+        empowerment
     });
 
     newEmployee.save()
         .then(employee => {
             res.redirect('/dashboard');
+            
         })
         .catch(err => console.log(err));
 });

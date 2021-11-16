@@ -37,10 +37,6 @@ const EmployeeSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    happiness: {
-        type: Number,
-        required: true
-    },
     bias: {
         type: Number,
         required: true
@@ -65,7 +61,7 @@ const EmployeeSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    workplace: {
+    empowerment: {
         type: Number,
         required: true
     },
