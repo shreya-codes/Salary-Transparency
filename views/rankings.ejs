@@ -1,0 +1,37 @@
+<div class="col-3 sidebar">
+    
+  <img src="/img/logoWhite.png" style="width:40%;" id="leftMid"></img>
+
+        <div class="btn logout" id="logout"><a href="/users/logout">Logout</a></div>
+</div>
+<div>
+    
+    <br><br><br><br><br>
+    <div class="fontA col-6 rank" id="rank">
+        Our <br> Rankings
+    </div>
+    <div class="rankTable" id="texts" style="overflow-y: scroll;">
+       
+        <table class="table">
+            <tr class="heading">
+              <td>S.No.</td>
+              <td>Name</td>
+              <td>Equality index</td>
+              <td>Empowerment index</td>
+              <td>Diversity</td>
+              <td>Final Index</td>
+            </tr>
+            <% for(var i=0; i<employeeRankings.length; i++){ %>
+
+            <tr>
+              <td><%=i+1%></td>
+              <td><%=employeeRankings[i]._id%></td>
+              <td><%=employeeRankings[i].avgEquality.toFixed(2)%></td>
+              <td><%=employeeRankings[i].avgEmpowerment.toFixed(2)%></td>
+              <td><%=employeeRankings[i].avgDiversity.toFixed(2)%></td>
+              <td><%=employeeRankings[i].totalAvg.toFixed(2)%></td>
+            </tr>
+           <%}%>
+          </table>
+    </div>
+</div>
