@@ -11,21 +11,21 @@ const Employee = require('../models/employee');
 //Company Model
 const Company = require('../models/Company');
 
-//Salary page
-router.get('/salary',async(req,res)=>{
-    const Salary=await Employee.aggregate([
- 
-        {
-          $match : {$and: 
-              [
-              { company: "Company 1" },{ position: "Low-Level" }
-              ]}
-        },
-        {  $group : {_id : "$date" } }
+//from company database
+router.get('/employeeForm', async (req,res)=>
+{
+  const companyname = await Company.aggregate([
+    {$match:{}},
+    {  $group:
+      {
+        _id: "$companyname"
+        }
+      }
        
-       ])
-       console.log(salary)
-       res.render('salary', {Salary})
+     
+  ]) // returns array
+  console.log(companyname)
+  res.render('employeeForm', {companyname})
 })
 //RANKING page
 router.get('/rankings', async (req,res)=>
@@ -74,10 +74,23 @@ router.get('/rankings', async (req,res)=>
           $sort:{totalAvg:-1}
       }
   ]) // returns array
-  console.log(employeeRankings)
+//   console.log(employeeRankings)
   res.render('rankings', {employeeRankings})
 })
-
+//Salary page
+router.get('/salary', async (req,res)=>
+{
+  const salary = await Employee.aggregate([{
+      $group:
+      
+      {_id:{company:"$company", position:"$position", salary:"$salary"}}},
+       {$group:{_id:"$_id.company", position:{$push:{k:"$_id.position", v:{$avg:"$_id.salary"}}}}},
+  {$project:{name:"$_id", position:{$arrayToObject:"$position"}}}
+])
+ // returns array
+//   console.log(salary)
+  res.render('salary', {salary})
+})
 //DASHBOARD page
 router.get('/dashboard',(req,res)=>res.render('dashboard'))
 

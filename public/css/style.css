@@ -69,6 +69,8 @@ transform:rotate(90deg)
     position:absolute;
     bottom:5%;
     right:5%;
+    padding: 30px;
+    margin:30px;
   }
   .search{
     padding-left:30px;

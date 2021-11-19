@@ -68,7 +68,11 @@ transform:rotate(90deg)
     height:55%;
     position:absolute;
     bottom:5%;
-    right:5%;
+    left:5%;
+    display:flex ;
+    justify-content: center; 
+    margin-left: 20%;
+    
   }
   .search{
     padding-left:30px;
@@ -108,7 +112,8 @@ transform:rotate(90deg)
     left:0%;
   }
   .navigation{
-    position: fixed; right:1%; top:2%; width:20%;
+    position: fixed; right:1%; top:2%; width:40%;
+    display: flex;
   }
   .navigation a{
     padding-left:30px; padding-right:30px;
