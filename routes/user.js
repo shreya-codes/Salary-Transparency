@@ -11,6 +11,22 @@ const Employee = require('../models/employee');
 //Company Model
 const Company = require('../models/Company');
 
+//Salary page
+router.get('/salary',async(req,res)=>{
+    const Salary=await Employee.aggregate([
+ 
+        {
+          $match : {$and: 
+              [
+              { company: "Company 1" },{ position: "Low-Level" }
+              ]}
+        },
+        {  $group : {_id : "$date" } }
+       
+       ])
+       console.log(salary)
+       res.render('salary', {Salary})
+})
 //RANKING page
 router.get('/rankings', async (req,res)=>
 {
@@ -53,6 +69,9 @@ router.get('/rankings', async (req,res)=>
                   $divide: [ "$totalSum", 3 ]
               }
           }
+      },
+      {
+          $sort:{totalAvg:-1}
       }
   ]) // returns array
   console.log(employeeRankings)
