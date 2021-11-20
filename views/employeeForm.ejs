@@ -36,6 +36,9 @@
                                             <div class="form-group mt-2 mb-2">
                                                 <label type="form-control"> Company </label>
                                                 <select class="form-control" id="exampleFormControlSelect1" name="company">
+                                                    <option value="none" selected disabled hidden>
+                                                        Select an Option
+                                                    </option>
                                                     <% for(var i=0; i<companyname.length; i++){ %>
 
                                                         <option>
@@ -54,7 +57,9 @@
                                             <div class="form-group mt-2 mb-2">
                                                 <label type="form-control"> Position </label>
                                                 <select class="form-control" name="position" id="exampleFormControlSelect1" >
-                                                    <option>--Select your Position--</option>
+                                                    <option value="none" selected disabled hidden>
+                                                        Select an Option
+                                                    </option>                                                    
                                                     <option>Low-Level</option>
                                                     <option>Mid-Level</option>
                                                     <option>High-Level</option>
@@ -68,9 +73,11 @@
                                             </div>
                                             <div class="form-group mt-2 mb-2">
                                                 <label type="form-control"> Experience </label>
-                                                <select class="form-control form-control-user" id="exampleFormControlSelect1" name="experience" required>
-                                                    <option>--Specify your Experienece--</option>
-                                                    <option>Begineer</option>
+                                                <select class="form-control form-control-user" value="none" id="exampleFormControlSelect1" name="experience" required>
+                                                    <option value="none" selected disabled hidden>
+                                                        Select an Option
+                                                    </option>
+                                                    <option>Beginner</option>
                                                     <option>Intermediate</option>
                                                     <option>Pro</option>
                                                    
@@ -207,7 +214,7 @@
                                                 <!-- question6-->
         
                                                 <div class="form-group mt-2 mb-2">
-                                                    <label type="form-control">Does your company organize women empowerment activities??
+                                                    <label type="form-control">Does your company organize women empowerment activities?
                                               
                                                   </label><br>
                                                     <div class="px-2">

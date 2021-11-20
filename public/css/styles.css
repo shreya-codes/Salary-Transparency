@@ -37,6 +37,7 @@ transform:rotate(90deg)
     text-align: center;
     font-weight:50;
     border: 1px solid white;
+    margin-left: 20px;
   }
   .form-group{
     font-size: 20px;
@@ -74,6 +75,13 @@ transform:rotate(90deg)
     margin-left: 20%;
     
   }
+  #ranking, #salary{
+    position: absolute;
+    bottom: 5%;
+    width: 40%;
+
+
+  }
   .search{
     padding-left:30px;
     padding-right:30px;
@@ -89,7 +97,7 @@ transform:rotate(90deg)
     background-color: #a5c4d5; position:absolute; height:100%; left:0%;
   }
   .logout{
-    position:absolute; bottom:5%; left:25%;
+    position:absolute; bottom:5%; left:45%;
   }
   #rank{
       font-size:80px; color:white; font-weight:400; line-height:80px; text-align:left; position:absolute; width:72%; right:0%;

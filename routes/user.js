@@ -172,7 +172,7 @@ router.get('/login',(req,res)=> res.render('login'));
                      //Save user
                      newUser.save()
                      .then(user=>{
-                         req.flash('success_msg', 'You are nOw registered !');
+                         req.flash('success_msg', 'You are now registered !');
                          res.redirect('/users/login');
                      })
                      .catch(err => console.log(err));
@@ -196,7 +196,7 @@ router.get('/login',(req,res)=> res.render('login'));
  //logout handle
  router.get('/logout',(req,res)=>{
      req.logout();
-     req.flash('success_msg','You are loggedout');
+     req.flash('success_msg','You are logged out');
      res.redirect('/users/login');
  })
 
